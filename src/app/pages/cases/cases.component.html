@@ -1,0 +1,29 @@
+<h2>switch</h2>
+
+<br />
+
+<pre><code>{{ example }}</code></pre>
+
+<br /><br />
+
+<div>
+  <select [(ngModel)]="roleSelected">
+    @for (role of roles; track role) {
+      <option [value]="role.value">{{ role.label }}</option>
+    }
+  </select>
+</div>
+
+<br />
+
+@switch (roleSelected) {
+  @case ('admin') {
+    <p>Admin panel</p>
+  }
+  @case ('user') {
+    <p>User panel</p>
+  }
+  @default {
+    <p>Unknown rol</p>
+  }
+}

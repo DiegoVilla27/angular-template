@@ -1,0 +1,45 @@
+<h2>defer basic</h2>
+
+<br />
+
+<pre><code>{{ exampleBasic }}</code></pre>
+
+<br />
+
+@defer {
+  <template-users />
+} @placeholder {
+  <p>Loading component users...</p>
+}
+
+<br /><br />
+
+<h2>defer timer</h2>
+
+<br />
+
+<pre><code>{{ exampleTimer }}</code></pre>
+
+<br />
+
+@defer (on timer(5s)) {
+  <template-users />
+} @placeholder {
+  <p>Loading component users...</p>
+}
+
+<br /><br />
+
+<h2>defer interaction</h2>
+
+<br />
+
+<pre><code>{{ exampleInteraction }}</code></pre>
+
+<br />
+
+@defer (on interaction(button)) {
+  <template-users />
+} @placeholder {
+  <button #button>Init users</button>
+}

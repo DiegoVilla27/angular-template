@@ -1,0 +1,24 @@
+<h2>if / else</h2>
+
+<br />
+
+<pre><code>{{ example }}</code></pre>
+
+<br /><br />
+
+<div>
+  <input 
+    type='checkbox' 
+    id='check' 
+    [(ngModel)]='userLoggedIn'
+  />
+  <label for='check'>Login</label>
+</div>
+
+<br />
+
+@if (userLoggedIn) {
+  <p>Welcome! 👋</p>
+} @else {
+  <p>Please, login 🔐</p>
+}

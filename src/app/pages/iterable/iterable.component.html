@@ -1,0 +1,23 @@
+<h2>for / empty</h2>
+
+<br />
+
+<pre><code>{{ example }}</code></pre>
+
+<br /><br />
+
+<div>
+  <button (click)="toggleTechnologies()">
+    {{ (technologies.length > 0) ? 'Clear' : 'Load' }} technologies
+  </button>
+</div>
+
+<br />
+
+<ul>
+  @for (tech of technologies; track tech; let i = $index) {
+    <li>{{ (i + 1) + ' - ' + tech }}</li>
+  } @empty {
+    <p>Not results...</p>
+  }
+</ul>
